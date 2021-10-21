@@ -4,7 +4,22 @@
  * @author Mendix UI Content Team
  */
 import { CSSProperties } from "react";
-import { EditableValue } from "mendix";
+
+export type HandlerTypeEnum = "mf" | "nf";
+
+export interface OutputEventsType {
+    eventName: string;
+    handlerType: HandlerTypeEnum;
+    nfName: string;
+    mfName: string;
+}
+
+export interface OutputEventsPreviewType {
+    eventName: string;
+    handlerType: HandlerTypeEnum;
+    nfName: string;
+    mfName: string;
+}
 
 export interface UnityWebGLPlayerContainerProps {
     name: string;
@@ -12,7 +27,7 @@ export interface UnityWebGLPlayerContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     unityModelPath: string;
-    out1?: EditableValue<string>;
+    outputEvents: OutputEventsType[];
     hoverGameObject: string;
     hoverMethod: string;
 }
@@ -21,7 +36,7 @@ export interface UnityWebGLPlayerPreviewProps {
     class: string;
     style: string;
     unityModelPath: string;
-    out1: string;
+    outputEvents: OutputEventsPreviewType[];
     hoverGameObject: string;
     hoverMethod: string;
 }

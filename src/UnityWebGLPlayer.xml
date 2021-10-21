@@ -13,13 +13,34 @@
             </property>
         </propertyGroup>
         <propertyGroup caption="Behavior">
-            <propertyGroup caption="输出">
-                <property key="out1" type="attribute" required="false">
-                    <caption>输出1</caption>
+            <propertyGroup caption="输出整件">
+                <property key="outputEvents" type="object" isList="true" required="false">
+                    <caption>输出整件</caption>
                     <description></description>
-                    <attributeTypes>
-                        <attributeType name="String" />
-                    </attributeTypes>
+                    <properties>
+                        <propertyGroup caption="General">
+                            <property key="eventName" type="string" required="true" multiline="false">
+                                <caption>事件名称</caption>
+                                <description></description>
+                            </property>
+                            <property key="handlerType" type="enumeration" defaultValue="mf" required="true">
+                                <caption>事件处理函数类型</caption>
+                                <description></description>
+                                <enumerationValues>
+                                    <enumerationValue key="mf">微流</enumerationValue>
+                                    <enumerationValue key="nf">纳流</enumerationValue>
+                                </enumerationValues>
+                            </property>
+                            <property key="nfName" type="string" required="false" multiline="false">
+                                <caption>纳流名称</caption>
+                                <description></description>
+                            </property>
+                            <property key="mfName" type="string" required="false" multiline="false">
+                                <caption>微流名称</caption>
+                                <description></description>
+                            </property>
+                        </propertyGroup>
+                    </properties>
                 </property>
             </propertyGroup>
         </propertyGroup>
