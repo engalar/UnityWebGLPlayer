@@ -9,12 +9,13 @@
     "node": ">=12"
   },
   "config": {
-    "projectPath": "./tests/testProject/",
+    "projectPath": "C:/Users/eg/Documents/GitHub/BigScreenForZhonghang",
     "mendixHost": "http://localhost:8080",
     "developmentPort": "3000"
   },
   "packagePath": "mendix",
   "scripts": {
+    "serve": "http-server public/unity3d/Build -g -p 5000 --cors",
     "start": "pluggable-widgets-tools start:server --open",
     "dev": "pluggable-widgets-tools start:web",
     "build": "pluggable-widgets-tools build:web",
