@@ -1,5 +1,5 @@
 import { useCreation, useHover } from "ahooks";
-import { createElement, CSSProperties, useEffect, useRef, useState } from "react";
+import { createElement, CSSProperties, useEffect, useRef } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 
 export interface UnityFCProps {
@@ -47,10 +47,6 @@ export default function UnityFC(props: UnityFCProps) {
             props.eventNames?.forEach(eventName => {
                 unityContext.on(eventName, value => {
                     props.onEvent!(eventName, value);
-
-                    if (eventName === "ClickObject") {
-                        setPipeName(value);
-                    }
                 });
             });
         }
@@ -60,39 +56,12 @@ export default function UnityFC(props: UnityFCProps) {
         };
     }, [unityContext]);
 
-    const [pipeName, setPipeName] = useState<string>();
-
-    return (
-        <div>
-            <div ref={ref}>
-                <Unity
-                    className={props.class}
-                    tabIndex={props.tabIndex}
-                    style={props.style}
-                    unityContext={unityContext}
-                />
-            </div>
-            <span>选择的管道名称 {pipeName}</span>
-            <button
-                className="btn mx-button mx-name-actionButton2 btn-default"
-                onClick={() => {
-                    if (pipeName) {
-                        unityContext.send(pipeName, "StopShake");
-                    }
-                }}
-            >
-                停止振动
-            </button>
-            <button
-                className="btn mx-button mx-name-actionButton2 btn-default"
-                onClick={() => {
-                    if (pipeName) {
-                        unityContext.send(pipeName, "StartShake");
-                    }
-                }}
-            >
-                开始振动
-            </button>
-        </div>
-    );
+    return (<div ref={ref}>
+        <Unity
+            className={props.class}
+            tabIndex={props.tabIndex}
+            style={props.style}
+            unityContext={unityContext}
+        />
+    </div>);
 }
