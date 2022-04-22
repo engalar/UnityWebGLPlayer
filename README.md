@@ -1,27 +1,14 @@
 # Mendix pluggable widget for 8.x
 ## [create by](https://forum.mendix.tencent-cloud.com/info/bf13d3ceafea45ca851bcf63e326de16)
 
-## UnityWebGLPlayer
-[My widget description]
+# 托管
 
-## Features
-[feature highlights]
 
-## Usage
-[step by step instructions]
+[https://forum.mendix.tencent-cloud.com/info/fc112aa36bcf44bba55fba5dbd5d4afc?csr=1](https://forum.mendix.tencent-cloud.com/info/fc112aa36bcf44bba55fba5dbd5d4afc?csr=1)
 
-## Demo project
-[link to sandbox]
+# mendix widget
+[https://github.com/engalar/UnityWebGLPlayer](https://github.com/engalar/UnityWebGLPlayer)
 
-## Issues, suggestions and feature requests
-[link to GitHub issues]
+# unity demo app
+[https://github.com/engalar/MendixLoveUnity](https://github.com/engalar/MendixLoveUnity)
 
-## Development and contribution
-
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
-
-[specify contribution]
